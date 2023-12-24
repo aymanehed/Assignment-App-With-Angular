@@ -1,0 +1,42 @@
+/* Page container */
+.page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Main content container */
+  .container {
+    width: 400px;
+    padding: 20px;
+    margin: 120px;
+    margin-left: 390px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Form styles */
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Form field styles */
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  /* Button styles */
+  button {
+    width: 100%;
+  }
+  
+  /* Page title styles */
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  

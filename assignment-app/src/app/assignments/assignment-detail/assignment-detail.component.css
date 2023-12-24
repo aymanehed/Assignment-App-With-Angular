@@ -1,0 +1,46 @@
+.center-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .custom-card {
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    margin: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .mat-card-content {
+    text-align: center;
+  }
+  
+  .mat-card-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .mat-card-subtitle {
+    font-size: 18px;
+    color: #555;
+  }
+  
+  .mat-card-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .mat-checkbox {
+    margin-bottom: 10px;
+  }
+  
+  .mat-flat-button {
+    margin-top: 10px;
+  }
+  

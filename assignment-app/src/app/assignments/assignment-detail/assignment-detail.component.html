@@ -1,0 +1,30 @@
+<div class="center-card">
+    <mat-card class="custom-card" *ngIf="assignmentTransmis">
+      <mat-card-content>
+        <mat-card-title  style="color:#007bff;" >
+          {{ assignmentTransmis.nom }}
+        </mat-card-title>
+        <mat-card-subtitle style="color:red;" >
+          {{ assignmentTransmis.dateDeRendu | date : 'dd/MM/yyyy' }}
+        </mat-card-subtitle>
+      </mat-card-content>
+  
+      <mat-card-actions id="bottom" >
+        <div [hidden]="!isLoggedIn()">
+          <mat-checkbox *ngIf="!assignmentTransmis.rendu" (click)="onAssignmentRendu()">
+            <p style="color:rgb(10, 180, 10); font-weight:bold"> Devoir rendu</p>
+          </mat-checkbox>
+        </div>
+        
+        <div *ngIf="isLoggedIn()" style="margin-top: 10px;margin-left:250px">
+          <button mat-flat-button color="primary" (click)="onAssignmentEdit(assignmentTransmis)" [hidden]="!isAdminLoggedIn()">
+            Edit
+          </button>
+          <button mat-flat-button color="warn" (click)="onAssignmentSupprime()" style="margin-left: 10px;" [hidden]="!isAdminLoggedIn()">
+            DELETE
+          </button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  

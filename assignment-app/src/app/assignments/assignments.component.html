@@ -1,0 +1,24 @@
+<!-- Your existing HTML code -->
+<H1>{{titre}}</H1>
+
+<main class="container" *ngIf="!formVisible " >
+  <a routerLink="/Assignment/Add" class="ajouterBtn" mat-flat-button color="primary" (click)="onAddAssignment()" [hidden]="!isAdminLoggedIn()" >
+    Ajouter un devoir
+  </a>
+
+  <div class="assignment-cards" >
+    <div class="assignment-card" *ngFor="let assignment of assignments" (click)="assignmentClique(assignment)" >
+      <nav >
+      <h3 class="card-subheader">{{assignment.dateDeRendu | date}}</h3>
+      <p appRendu *ngIf="assignment.rendu; else nonsoumis">
+        Le devoir {{assignment.nom}} a été rendu.
+      </p>
+      <ng-template #nonsoumis>
+        <p>
+          Le devoir {{assignment.nom}} n'a pas encore été rendu.
+        </p>
+      </ng-template>
+      </nav>
+    </div>
+  </div>
+

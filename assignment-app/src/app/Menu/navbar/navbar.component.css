@@ -1,0 +1,20 @@
+.navbar {
+  position: absolute;
+    justify-content: space-between; /* Ensure other content is on the left */
+    align-items: center;
+    color: #fff;
+    padding: 10px 20px;
+    width: 100%;
+    top: 0%;
+    left: 0;
+    z-index: 1;
+
+  }
+  
+  .assignment {
+    text-decoration: none; 
+    color: black;
+  }
+
+ 
+  

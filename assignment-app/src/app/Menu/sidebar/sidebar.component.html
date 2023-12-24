@@ -1,0 +1,17 @@
+<div id="menu" [class.open]="isMenuOpen">
+    <div id="menu-bar" (click)="toggleMenu()">
+      <div id="bar1" class="bar"></div>
+      <div id="bar2" class="bar"></div>
+      <div id="bar3" class="bar"></div>
+    </div>
+    <nav class="nav" *ngIf="isMenuOpen" (click)="closeMenu()">
+      <ul>
+        <li> <a routerLink="/AssignmentList" >Assignments</a></li>
+        <!-- <li><a href="/MyProfile">My Profile</a></li> -->
+        <li><a (click)="onLogout()"  [hidden]="!isLoggedIn()" >Logout</a></li>
+      </ul>
+    </nav>
+  </div>
+  
+  <div class="menu-bg" [class.change-bg]="isMenuOpen"></div>
+  <router-outlet></router-outlet>

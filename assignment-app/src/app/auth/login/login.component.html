@@ -1,0 +1,31 @@
+<div class="container" id="container" >
+    <div class="form-container sign-in-container">
+        <form   (submit)="onLogin(); loginForm.reset()"   #loginForm>
+            <h1>Sign in</h1>
+            <input matInput placeholder="Username" required value="{{username}}" name="username" [(ngModel)]="username" >
+            <input matInput [type]="hide ? 'password' : 'text'" placeholder="Password" value="{{password}}"  name="password" [(ngModel)]="password">
+            <button  mat-flat-button color="primary" >login</button>
+        </form>
+    </div>
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-right">
+                <h1>Hello, Friend!</h1>
+                <p>Enter your username and password to SignIn and  start your journey </p>
+            </div>
+        </div>
+    </div>
+</div> 
+<script>
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+
+(function() {
+    // Replace '${usernameParameter ?: 'username'}' with the actual condition
+    const usernameParameter = 'username'; // You should have a value for usernameParameter
+    document.forms['loginForm'].elements[usernameParameter].focus();
+})();
+
+</script>
+<router-outlet></router-outlet>
+```
