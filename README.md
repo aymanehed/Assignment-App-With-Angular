@@ -8,11 +8,11 @@ Login component
 ### Users 
     login: 'admin', password: 'admin'
     login: 'user', password: 'user'
-### Service
+### Services
 - AuthService to check is user logged,Admin,User
 - Assignment Service to add,update,Delete or get  an assignment   
   
-### Permission
+### Permissions
 - Non User can just see the list of Assignement
 - User can see the Detail of the Assignement & Check the rendu
 - Admin Can Create & Edit & Delete Assignments
